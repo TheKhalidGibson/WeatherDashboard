@@ -1,4 +1,23 @@
 let searchEl = document.querySelector("#search")
+let searchList = document.querySelector("#search-list")
+let searchResults = [];
+
+function renderSearchResults(){
+
+    for (let i = 0; i < searchResults.length; i++) {
+     
+        let searchResults = searchResults[i];
+
+        let li = document.createElement("li");
+        li.textContent = searchResults;
+        li.setAttribute("data-index", i);
+
+
+
+        
+    }
+
+}
 
 
 
