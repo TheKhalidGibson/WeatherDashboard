@@ -7,24 +7,90 @@
     <link rel="stylesheet" href="./style.css"/>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
 
-    <h1>Weather Dashboard</h1>
+    <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
+        <h1>Weather Dashboard</h1>
+    </header>
 
-    <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Search for a City:</label>
-          <input type="email" class="form-control" id="inputEmail4">
-        </div>  
-               
-      
+    <div class="container" style="max-width: 1800px">
+        <div class="row1">
+            <aside class="col-12 pb-3">
+                <h2 id="form-heading" class="mt-1 h2 form-label">
+                    Search for a City:
+                </h2>
+                <form id="search-form" class="form">
+                    <div class="col-md-4 pb-3">
+                      
+                      <input class="form-input weather-search" type="text" id="search-input" placeholder="London" >
+                      
+                    </div>
+                    
+                    
+                 
+                   
+                    <div class="col-12 pb-5">
+                      <button class="btn btn-primary" type="search">
+                        Search
+                      </button>
+                    </div>
+                </form>
+
+                
+
+
+                <div class="d-grid gap-3 col-md-3">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                </div>
         
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Search</button>
+
+            </aside>
+
+            
+                
+            
+            
+                
+            
         </div>
-    </form>
+        
+        <div class="card">
+        <div class="card-body col-md-4 row-2">
+          This is some text within a card body.
+        </div>
+        </div>
+                
+            <div class="col-lg-9">    
+                
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+
+    
+    
+
+    
+      
+
+   
     
 
 
