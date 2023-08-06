@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 // The following fetch should be nested inside of an event listener
 
 fetch("https://api.openweathermap.org/geo/1.0/direct?q=Dallas&limit=5&appid=dd13cf1650c8484f942a9cd1a13f9ff5")
