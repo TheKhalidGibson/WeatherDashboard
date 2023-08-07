@@ -70,43 +70,59 @@ searchEl.addEventListener("click", function (event) {
         return null
     }
 
-
+    
     const currentWeather = fetchCurrentWeather(coordinates)
-        console.log()
-    // function renderSearchResults(){
-
-    //     for (let i = 0; i < searchResults.length; i++) {
-
-    //         let searchResults = searchResults[i];
-
-    //         let li = document.createElement("li");
-    //         li.textContent = searchResults;
-    //         li.setAttribute("data-index", i);
-
-
-    //         searchList.appendChild(li);
-
-
-    //     }
-
-    // }
-
-    // if (event.target.matches("button")) {
+    console.log()
+    
+    
+    
+    
+    
+    if (event.target.matches("button")) {
+        
+        
+        
+        localStorage.setItem()
+        
+    }
+    
+});
 
 
+function renderSearchResults(){
+    
+    for (let i = 0; i < searchResults.length; i++) {
+        
+        let searchResults = searchResults[i];
+        
+        let li = document.createElement("li");
+        li.textContent = searchResults;
+        li.setAttribute("data-index", i);
+        
+        
+        searchList.appendChild(li);
+        
+        
+    }
+    
+}
 
 
+function init() {
 
-    //     localStorage.setItem()
+    let storedSearchResults = JSON.parse(localStorage.getItem("searchResults"));
 
-    // }
+    if (storedSearchResults !== null) {
 
+        searchResults = storedSearchResults;
+        
+    }
 
-
+    renderSearchResults();
+}
 
     // The following fetch should be nested inside of an event listener
 
 
-});
 
 // searchList.addEventListener("click", function (event))

@@ -15,33 +15,36 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-    <div class="container" style="max-width: 1800px">
-        <div class="row1">
-            <aside class="col-12 pb-3">
+    <div class="container" style="max-width: 1800px;">
+        <div class="row">
+          
+            <div class="col-4 mt">
+
                 <h2 id="form-heading" class="mt-1 h2 form-label">
                     Search for a City:
                 </h2>
-                <form id="search-form" class="form">
-                    <div class="col-md-4 pb-3">
-                      
-                      <input class="form-input weather-search" type="text" id="search-input" placeholder="London" >
-                      
-                    </div>
+
+                <form class="row g-3">
                     
                     
-                 
+                    <div class="col-12">
+                      <input type="text" class="form-control" id="inputCity" placeholder="London">
+                    </div>                   
                    
-                    <div class="col-12 pb-5">
-                      <button class="btn btn-primary" type="search">
-                        Search
-                      </button>
+                   
+                  
+                    
+                    <div class="col-12">
+                      <button id="search" class="btn btn-primary">Search</button>
                     </div>
+
                 </form>
 
-                
+                <hr>
 
+                <ul id="search-list"></ul>
 
-                <div class="d-grid gap-3 col-md-3 mt-5">
+                <!-- <div class="d-grid gap-3 col-md-3 mt-5">
                     <button class="btn btn-primary" type="button">Button</button>
                     <button class="btn btn-primary" type="button">Button</button>
                     <button class="btn btn-primary" type="button">Button</button>
@@ -50,42 +53,69 @@
                     <button class="btn btn-primary" type="button">Button</button>
                     <button class="btn btn-primary" type="button">Button</button>
                     <button class="btn btn-primary" type="button">Button</button>
-                </div>
+                </div> -->
         
+        
+            </div>
+          
+            <div class="col-6">
 
-            </aside>
+                <div class="card mt-5 mb-5">
+                    <div class="card-header">
+                      Featured
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
 
-            
-                
-            
-            
-                
-            
+                  <h2 id="form-heading" class="mt-1 h2 form-label">
+                    5 Day Forecast:
+                  </h2>
+                  <div class="row g-2">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                  </div>
+
+            </div>
         </div>
-        
-        <div class="card mb-5">
-           
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
+      </div>
 
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-          
-          
-                
-          
-    </div>
-
+ 
     
 
     
