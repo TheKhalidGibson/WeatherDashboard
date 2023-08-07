@@ -80,9 +80,15 @@ searchEl.addEventListener("click", function (event) {
     
     if (event.target.matches("button")) {
         
+        let citySearched = event.target.getAttribute("inputCity")
+
+            console.log("city searched", typeof citySearched)
         
+        let searchList = previousElementSibling
+
+            console.log("search List", searchList.value)
         
-        localStorage.setItem()
+        localStorage.setItem(citySearched, searchList.value)
         
     }
     
