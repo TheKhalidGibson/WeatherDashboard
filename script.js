@@ -3,6 +3,10 @@ let searchList = document.querySelector("#search-list");
 let searchResults = [];
 let forecastContainer1 = document.querySelector("#forecastContainer1")
 let forecastContainer2 = document.querySelector("#forecastContainer2")
+let forecastContainer3 = document.querySelector("#forecastContainer3")
+let forecastContainer4 = document.querySelector("#forecastContainer4")
+let forecastContainer5 = document.querySelector("#forecastContainer5")
+let forecastContainer6 = document.querySelector("#forecastContainer6")
 let fiveDayForcast = [0,8,16,24,32]
 const apiKey = "dd13cf1650c8484f942a9cd1a13f9ff5"
 
@@ -125,8 +129,48 @@ searchEl.addEventListener("click", function (event) {
             <p class="card-text">Humidity: ${forecast.list[0].main.humidity} %</p>
             </div>
         </div>`
+           let card3 = `  <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[8].weather[8].icon}</h6>
+            <p class="card-text">Temp: ${forecast.list[8].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[8].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[8].main.humidity} %</p>
+            </div>
+        </div>`
+           let card4 = `  <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[16].weather[16].icon}</h6>
+            <p class="card-text">Temp: ${forecast.list[16].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[16].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[16].main.humidity} %</p>
+            </div>
+        </div>`
+           let card5 = `  <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[24].weather[24].icon}</h6>
+            <p class="card-text">Temp: ${forecast.list[24].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[24].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[24].main.humidity} %</p>
+            </div>
+        </div>`
+           let card6 = `  <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[32].weather[32].icon}</h6>
+            <p class="card-text">Temp: ${forecast.list[32].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[32].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[32].main.humidity} %</p>
+            </div>
+        </div>`
             
         forecastContainer2.innerHTML += card2;
+        forecastContainer3.innerHTML += card3;
+        forecastContainer4.innerHTML += card4;
+        forecastContainer5.innerHTML += card5;
+        forecastContainer6.innerHTML += card6;
             //second card
             console.log(forecast.list[7]);
             
