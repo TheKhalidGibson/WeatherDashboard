@@ -1,7 +1,8 @@
 let searchEl = document.querySelector("#search");
 let searchList = document.querySelector("#search-list");
 let searchResults = [];
-let forecastContainer = document.querySelector("#forecastContainer")
+let forecastContainer1 = document.querySelector("#forecastContainer1")
+let forecastContainer2 = document.querySelector("#forecastContainer2")
 const apiKey = "dd13cf1650c8484f942a9cd1a13f9ff5"
 
 const searchInput = document.querySelector("input")
@@ -92,20 +93,34 @@ searchEl.addEventListener("click", function (event) {
         .then(response => response.json())
         .then(forecast => {
 
+
+            let card1 = `<div class="card-header">
+            ${forecast.city.name} ${dayjs().format('(M/D/YYYY)')}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">Temp: ${forecast.list[0].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[0].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[0].main.humidity} %</p>
+            </div>`
+
             //represents the first three hours out of 24
             //first card
+            forecastContainer1.innerHTML += card1;
             console.log(forecast);
             console.log(forecast.list[0].main.temp);
 
-           let card = `  <div class="card" style="width: 18rem;">
+           let card2 = `  <div class="card" style="width: 18rem;">
             <div class="card-body">
-            <h5 class="card-title">${forecast.list[0].main.temp}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[0].weather.icon}</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">${dayjs('2023-06-15').format('MMM D, YYYY')}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${forecast.list[0].weather[0].icon}</h6>
+            <p class="card-text">Temp: ${forecast.list[0].main.temp} °F</p>
+            <p class="card-text">Wind: ${forecast.list[0].wind.speed} MPH</p>
+            <p class="card-text">Humidity: ${forecast.list[0].main.humidity} %</p>
             </div>
         </div>`
             
-        forecastContainer.innerHTML += card;
+        forecastContainer2.innerHTML += card2;
             //second card
             console.log(forecast.list[7]);
             
