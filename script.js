@@ -7,6 +7,7 @@ const apiKey = "dd13cf1650c8484f942a9cd1a13f9ff5"
 
 const searchInput = document.querySelector("input")
 init();
+
 // function renderSearchResults(){
 
 //     for (let i = 0; i < searchResults.length; i++) {
@@ -94,7 +95,7 @@ searchEl.addEventListener("click", function (event) {
         .then(forecast => {
 
 
-            let card1 = `<div class="card-header">
+            let card1 = `<div class="card-header text-white bg-dark">
             ${forecast.city.name} ${dayjs().format('(M/D/YYYY)')}
           </div>
           <div class="card-body">
