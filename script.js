@@ -3,10 +3,13 @@ let searchList = document.querySelector("#search-list");
 let searchResults = [];
 let forecastContainer1 = document.querySelector("#forecastContainer1")
 let forecastContainer2 = document.querySelector("#forecastContainer2")
+let fiveDayForcast = [0,8,16,24,32]
 const apiKey = "dd13cf1650c8484f942a9cd1a13f9ff5"
 
 const searchInput = document.querySelector("input")
 init();
+
+
 
 // function renderSearchResults(){
 
@@ -45,7 +48,7 @@ function renderSearchResults() {
 
         let li = document.createElement("li");
         li.textContent = searchResults;
-        li.setAttribute("data-index", i);
+        li.setAttribute("#search-list", i);
 
 
         searchList.appendChild(li);
@@ -54,6 +57,8 @@ function renderSearchResults() {
     }
 
 }
+
+
 
 
 function init() {
@@ -72,7 +77,7 @@ function init() {
 // The following fetch should be nested inside of an event listener
 
 
-
+    let icon = "https://openweathermap.org/img/wn/___ICON___.png";
 // searchList.addEventListener("click", function (event))
 
 searchEl.addEventListener("click", function (event) {
@@ -113,7 +118,7 @@ searchEl.addEventListener("click", function (event) {
 
            let card2 = `  <div class="card" style="width: 18rem;">
             <div class="card-body">
-            <h5 class="card-title">${dayjs('2023-06-15').format('MMM D, YYYY')}</h5>
+            <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${forecast.list[0].weather[0].icon}</h6>
             <p class="card-text">Temp: ${forecast.list[0].main.temp} °F</p>
             <p class="card-text">Wind: ${forecast.list[0].wind.speed} MPH</p>
@@ -131,6 +136,8 @@ searchEl.addEventListener("click", function (event) {
         })
 
 
+        
+
     // if (!coordinates.lat && !coordinates.lon) {
     //     console.log("coordinates are falsy")
     //     return null
@@ -138,6 +145,28 @@ searchEl.addEventListener("click", function (event) {
 
 });
 
+function name(params) {
+
+    for (let i = 0; i < fiveDayForcast.length; i++) {
+        
+        // let fiveDayForcast = forecast.list[]
+        
+    }
+    
+}
+
+// this event listener saves the data
+
+searchEl.addEventListener("click", function(event){
+
+    if (event.target.matches("button")) {
+
+        let citiesSearched = event.target.getAttribute("forecast")
+
+        localStorage.setItem()
+        
+    }
+})
 
 
 //make event listener for buttons
