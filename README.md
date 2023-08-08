@@ -23,4 +23,14 @@ GIVEN a dashboard with access to current weather
 WHEN a city is searched
 THEN I receive results of multiple aspects of weather conditions for the city that was submitted into the search input
 WHEN I take a look at the weather presented for that city I can see the city name, the current date, the temperature, the humdity percentage, and the wind speed in MPH
+WHEN I view future weather conditions for that city 
+THEN I am presented with the weather projection for the next 5 days
+WHEN I click on the cities searched
+THEN I will see the current and future conditions for that city
 ```
+
+### Screenshot
+
+https://drive.google.com/file/d/1bSgtvLKYFvymD8KnwLwQEhQQC5yoKz5q/view?usp=drive_link
+
+![Alt text](image.png)
