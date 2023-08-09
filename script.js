@@ -107,8 +107,8 @@ searchEl.addEventListener("click", function (event) {
             let card1 = `<div class="card-header text-white bg-dark">
             ${forecast.city.name} ${dayjs().format('(M/D/YYYY)')}
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
+          <div class="card-body bg-light">
+            <h5 class="card-title">Today's Weather Forecast</h5>
             <p class="card-text">Temp: ${forecast.list[0].main.temp} °F</p>
             <p class="card-text">Wind: ${forecast.list[0].wind.speed} MPH</p>
             <p class="card-text">Humidity: ${forecast.list[0].main.humidity} %</p>
@@ -175,6 +175,7 @@ searchEl.addEventListener("click", function (event) {
             console.log(forecast.list[7]);
             
 
+            localStorage.setItem(event.target, searchInput.value)
         // }).catch((err) => {
         //     console.log(err)
 })
