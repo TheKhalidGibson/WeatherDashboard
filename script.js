@@ -13,12 +13,16 @@ let fiveDayForecast = [0,8,16,24,32]
 const apiKey = "dd13cf1650c8484f942a9cd1a13f9ff5"
 
 const searchInput = document.querySelector("input")
+
+// function below creates and adds previous search buttons
 renderSearchResults();
 
 
 
 
 function renderSearchResults() {
+   
+    searchList.innerHTML = ""
 
     for (let i = 0; i < searchResults.length; i++) {
 
@@ -63,8 +67,9 @@ searchEl.addEventListener("click", function (event) {
 
 
     console.log(searchInput.value)
-    searchResults.push(searchInput.value)
-    localStorage.setItem("searchResults", JSON.stringify(searchResults))
+    // searchResults.push(searchInput.value)
+    // localStorage.setItem("searchResults", JSON.stringify(searchResults))
+    init(searchInput.value)
 
     console.log(event.target)
 
