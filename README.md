@@ -52,9 +52,8 @@ Refer to this link [GitHub Repository](https://github.com/TheKhalidGibson/Weathe
 The following images reflect the functionality and final results of development for this deployed application:
 
 This is an image showing the About page of my portfolio
-![Image showing the About page of my portfolio](./public/assets/portfolioScreenshot1.png)
+![Image showing the About page of my portfolio](./assets/weatherDashboard.png)
 
-This is an image showing the Projects page of my portfolio
-![Image showing the Projects page of my portfolio](./public/assets/portfolioScreenshot2.png)
+
 
 
