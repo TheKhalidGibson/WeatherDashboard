@@ -101,7 +101,7 @@ function getWeather(city) {
         forecastContainer6.innerHTML = "";
         
 
-        let card1 = `<div class="card-header text-white bg-dark">
+        let card1 = `<div class="card-header text-white weather-header">
         ${forecast.city.name} ${dayjs().format('(M/D/YYYY)')}
       </div>
       <div class="card-body bg-light">
@@ -117,8 +117,8 @@ function getWeather(city) {
         console.log(forecast);
         console.log(forecast.list[0].main.temp);
 
-       let card2 = `  <div class="card" style="width: 18rem;">
-        <div class="card-body">
+       let card2 = `  <div class="card" style="width: 12rem;">
+        <div class="card-body-two">
         <h5 class="card-title">${dayjs().format('(M/D/YYYY)')}</h5>
         <img src="https://openweathermap.org/img/w/${forecast.list[0].weather[0].icon}.png" class="card-subtitle mb-2 text-muted">
         <p class="card-text">Temp: ${forecast.list[0].main.temp} °F</p>
@@ -126,8 +126,8 @@ function getWeather(city) {
         <p class="card-text">Humidity: ${forecast.list[0].main.humidity} %</p>
         </div>
     </div>`;
-       let card3 = `  <div class="card" style="width: 18rem;">
-        <div class="card-body">
+       let card3 = `  <div class="card" style="width: 12rem;">
+        <div class="card-body-two">
         <h5 class="card-title">${dayjs().add(1, "day").format('(M/D/YYYY)')}</h5>
         <img src="https://openweathermap.org/img/w/${forecast.list[8].weather[0].icon}.png" class="card-subtitle mb-2 text-muted">
         <p class="card-text">Temp: ${forecast.list[8].main.temp} °F</p>
@@ -135,8 +135,8 @@ function getWeather(city) {
         <p class="card-text">Humidity: ${forecast.list[8].main.humidity} %</p>
         </div>
     </div>`;
-       let card4 = `  <div class="card" style="width: 18rem;">
-        <div class="card-body">
+       let card4 = `  <div class="card" style="width: 12rem;">
+        <div class="card-body-two">
         <h5 class="card-title">${dayjs().add(2, "day").format('(M/D/YYYY)')}</h5>
         <img src="https://openweathermap.org/img/w/${forecast.list[16].weather[0].icon}.png" class="card-subtitle mb-2 text-muted">
         <p class="card-text">Temp: ${forecast.list[16].main.temp} °F</p>
@@ -144,8 +144,8 @@ function getWeather(city) {
         <p class="card-text">Humidity: ${forecast.list[16].main.humidity} %</p>
         </div>
     </div>`;
-       let card5 = `  <div class="card" style="width: 18rem;">
-        <div class="card-body">
+       let card5 = `  <div class="card" style="width: 12rem;">
+        <div class="card-body-two">
         <h5 class="card-title">${dayjs().add(3, "day").format('(M/D/YYYY)')}</h5>
         <img src="https://openweathermap.org/img/w/${forecast.list[24].weather[0].icon}.png" class="card-subtitle mb-2 text-muted">
         <p class="card-text">Temp: ${forecast.list[24].main.temp} °F</p>
@@ -153,8 +153,8 @@ function getWeather(city) {
         <p class="card-text">Humidity: ${forecast.list[24].main.humidity} %</p>
         </div>
     </div>`;
-       let card6 = `  <div class="card" style="width: 18rem;">
-        <div class="card-body">
+       let card6 = `  <div class="card" style="width: 12rem;">
+        <div class="card-body-two">
         <h5 class="card-title">${dayjs().add(4, "day").format('(M/D/YYYY)')}</h5>
         <img src="https://openweathermap.org/img/w/${forecast.list[32].weather[0].icon}.png" class="card-subtitle mb-2 text-muted">
         <p class="card-text">Temp: ${forecast.list[32].main.temp} °F</p>
